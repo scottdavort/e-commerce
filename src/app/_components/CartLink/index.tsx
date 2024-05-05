@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { useCart } from '../../_providers/Cart'
 
 import classes from './index.module.scss'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import '../../_css/tailwind.css'
 
 export const CartLink: React.FC<{
   className?: string
@@ -19,7 +21,9 @@ export const CartLink: React.FC<{
   }, [cart])
 
   return (
+    
     <Link className={[classes.cartLink, className].filter(Boolean).join(' ')} href="/cart">
+      
       <Fragment>
         Cart
         {typeof length === 'number' && length > 0 && (

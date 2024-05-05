@@ -6,8 +6,11 @@ import { fetchFooter, fetchGlobals } from '../../_api/fetchGlobals'
 import { ThemeSelector } from '../../_providers/Theme/ThemeSelector'
 import { Gutter } from '../Gutter'
 import { CMSLink } from '../Link'
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import classes from './index.module.scss'
+// import tailwind.css 
+import '../../_css/tailwind.css'
 
 export async function Footer() {
   let footer: Footer | null = null
@@ -30,11 +33,12 @@ export async function Footer() {
           <picture>
             <img
               className={classes.logo}
-              alt="Payload Logo"
-              src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/payload/src/admin/assets/images/payload-logo-light.svg"
+              alt="Company Logo"
+              src="./company-logo.png"
             />
           </picture>
         </Link>
+        <p className="font-extralight place-items-center">Final project for Scott Manley 2024 CSCV 337 SP 24</p>
         <nav className={classes.nav}>
           <ThemeSelector />
           {navItems.map(({ link }, i) => {
@@ -42,15 +46,13 @@ export async function Footer() {
           })}
           <Link href="/admin">Admin</Link>
           <Link
-            href="https://github.com/payloadcms/payload/tree/main/templates/ecommerce"
+            href="https://github.com/scottdavort/e-commerce/tree/main"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Source Code
+           <GitHubIcon /> Github Source Code
           </Link>
-          <Link href="https://payloadcms.com" target="_blank" rel="noopener noreferrer">
-            Payload
-          </Link>
+
         </nav>
       </Gutter>
     </footer>
