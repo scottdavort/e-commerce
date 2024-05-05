@@ -400,6 +400,8 @@ export interface Order {
   updatedAt: string
   createdAt: string
 }
+// User collection definition for Payload admin panel and config file (src/payload/config.ts)
+
 export interface User {
   id: string
   name?: string | null
