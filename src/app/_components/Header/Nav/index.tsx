@@ -7,10 +7,10 @@ import { Header as HeaderType, User } from '../../../../payload/payload-types'
 import { useAuth } from '../../../_providers/Auth'
 import { CartLink } from '../../CartLink'
 import { CMSLink } from '../../Link'
-import LoginIcon from '@mui/icons-material/Login'
 
 import classes from './index.module.scss'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import LoginIcon from '@mui/icons-material/Login'
 
 export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
   const navItems = header?.navItems || []
@@ -32,6 +32,7 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
       })}
       <ShoppingCartIcon />
       <CartLink />
+      <LoginIcon />
       {user && <Link href="/account">Account</Link>}
       {!user && (
         <React.Fragment>

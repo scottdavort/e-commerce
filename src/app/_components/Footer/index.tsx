@@ -6,11 +6,11 @@ import { fetchFooter, fetchGlobals } from '../../_api/fetchGlobals'
 import { ThemeSelector } from '../../_providers/Theme/ThemeSelector'
 import { Gutter } from '../Gutter'
 import { CMSLink } from '../Link'
-import GitHubIcon from '@mui/icons-material/GitHub';
+
 
 import classes from './index.module.scss'
-// import tailwind.css 
-import '../../_css/tailwind.css'
+
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export async function Footer() {
   let footer: Footer | null = null
@@ -38,7 +38,7 @@ export async function Footer() {
             />
           </picture>
         </Link>
-        <p className="font-extralight place-items-center">Final project for Scott Manley 2024 CSCV 337 SP 24</p>
+
         <nav className={classes.nav}>
           <ThemeSelector />
           {navItems.map(({ link }, i) => {
@@ -50,9 +50,9 @@ export async function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-           <GitHubIcon /> Github Source Code
+            <GitHubIcon /> Github Source Code
           </Link>
-
+          <p>Final project for Scott Manley 2024 CSCV 337 SP 24</p>
         </nav>
       </Gutter>
     </footer>
